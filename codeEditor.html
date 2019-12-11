@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+        
+        <title>Code Editor</title>
+        <!--CSS IMPORT-->
+        <link rel="stylesheet" type="text/css" href="codeEditor.css">
+        <!--JAVASCRIPT IMPORT-->
+        <script src="codeEditor.js"></script>
+        <style id="styleHead"> 
+        </style>
+        <script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+        <script> 
+            $(document).ready(function () {
+                $("#codeEditorPage").addClass("active");
+            });
+        </script>
+    </head>
+        
+    <body>
+
+        <div class="fullWrapper">
+        <h3 id="header">Code Editor</h3>
+        <div class="panelWrapper">
+            <div class="inputBox">
+            
+            <!--CSS INPUT-->
+            <textarea id="cssInput" rows="10" cols="50" placeholder="Double Click Me" ondblclick="cssFill()"></textarea>
+            
+            <!--HTML INPUT-->    
+            <textarea id="htmlInput" rows="10" cols="50" placeholder="Double Click Me" ondblclick="htmlFill()"></textarea>
+            
+            </div>
+            <!--TEST BOX-->
+            <div id="testBox">Double click both boxes to the left, then click HTML and CSS.
+            </div>
+            
+        </div>
+    
+        <!-- Buttons -->
+        <div class="btnWrapper">
+            
+            <button class="tooltip" type="button" id="htmlBtn" onclick="htmlAdd()">HTML<span class="tooltiptext">This Button is used to show the result of your HTML code</span></button>
+            
+            <button class="tooltip" id="cssBtn" type="button" onclick="togglecss(this)">CSS<span class="tooltiptext">This button is used to turn on or off the CSS</span></button>
+            
+            <button class="tooltip" id="eraseBtn" type="button" onclick="erase()">Erase<span class="tooltiptext">This buton is used to erase your code and reset the preview pane</span></button>
+                    
+            <h4 id="author" ondblclick="changeTitle()">By Wesley Park</h4>
+
+            </div>
+        
+    </div>
+    </body>
+
+</html>
